@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/room.jpg');
+    background-repeat: no-repeat;
+
+}
+h1{color:green;}
+#app{
+    width: 800px;
+    height: 500px;
+    --border:1px solid #258e45;
+    padding: 0 10px;
+    background-image: url('img/tv.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.display{
+    width: 540px;
+    height: 280px;
+    border-radius: 10px;
+    margin: 110px auto 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    background: linear-gradient(106deg, rgba(0,0,0,1) 0%, rgba(63, 102, 6, 0.26) 10%, rgba(56, 101, 0, 0.35) 79%, rgba(0,0,0,1) 100%);
+}
+.display__text{
+    color:white;
+    padding:3px 10px;
+    font-family: monospace;
+    white-space: nowrap;
+    letter-spacing: .15em;
+
+}
+.display__text + .display__text{
+    margin-top: 5px;
+}
+.typewriter .display__text-typewriter {
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    box-shadow:  inset 0 0 20px 20px rgba(4, 88, 46, 0.11);
+    animation: typing 0.9s steps(30, end);
+}
+.display__text-chars{
+
+}
+.display__char{
+    background-color: white;
+    padding: 1px 5px;
+    animation: char-show 0.7s steps(30,end);
+    animation-fill-mode: forwards;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes char-show{
+    from{
+        background-color: rgba(255,255,255,1);
+    }
+    to{
+        background-color: rgba(255,255,255,0);
+    }
+}
